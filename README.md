@@ -38,48 +38,67 @@ mern-testing/
 
 ## Tech Stack
 Frontend: React, JavaScript, CSS
+
 Backend: Node.js, Express
+
 Database: MongoDB (Mongoose)
+
 Authentication: JWT
+
 Testing: Jest, Supertest, React Testing Library
+
 Debugging: console logs, breakpoints, error handling middleware
 
 
 ## Getting Started
+
 Prerequisites
 Node.js >= 18
 npm >= 9
 MongoDB
 
-## Installation
+# Installation
 
 Clone the repository:
+
 git clone <your-repo-url>
+
 cd <project-root>
 
 Install dependencies for server and client:
+
 cd server
+
 npm install
 
 cd ../client
+
 npm install
 
 Create .env files for server and client with appropriate variables (e.g., MONGO_URI, JWT_SECRET).
 
-## Run the application:
+# Run the application:
 
-# Run server
-cd server
+Run server
+ 
+cd ../server
+
 npm run dev
 
-# Run client
+Run client
+
 cd ../client
+
 npm start
 
 ## Testing Strategy
+
 # Unit Tests
+
 # Client:
+
 Test React components for rendering, props, and event handling using React Testing Library.
+
    Components Covered:
 Button Component – Render, variant, size, disabled state, and click handler.
 App Component – Render of main heading and core functionality.
@@ -90,7 +109,9 @@ Ensured components render correctly with default props and custom variations.
 Verified click events trigger expected behavior. 
 
 # Server: 
+
 Test functions and utilities in isolation using Jest.
+
       Endpoints Covered:
 POST /api/posts – Create new posts
 GET /api/posts – Fetch all posts with pagination and category filters
@@ -99,6 +120,7 @@ PUT /api/posts/:id – Update post (only by author)
 DELETE /api/posts/:id – Delete post (only by author)
 
 # Approach:
+
 Authentication Testing
 Verified that requests without valid JWT tokens return 401 Unauthorized.
 Verified that only the author can update or delete their posts; other users receive 403 Forbidden.
@@ -111,10 +133,12 @@ Created, updated, and deleted posts programmatically using test scripts.
 Confirmed the API returns the expected status codes (200, 201, 404, etc.) and data structure.
 
 # Integration Tests
+
 Test API endpoints using Supertest.
 Verify authentication, authorization, and CRUD operations
 
 # End-to-End Tests
+
 Test critical user flows from frontend to backend.
 Use tools like Cypress or Playwright (optional).
 
@@ -122,17 +146,20 @@ Example:
 User logs in → Creates a post → Updates the post → Deletes the post
 
 # Debugging Techniques
+
 Use console.log() to trace values and flow.
 Apply error handling middleware on server.
 Check authentication/authorization failures carefully.
 Use breakpoints in VS Code for step-by-step debugging.
 
 # Test Coverage
+
 Client: Unit and integration tests for components and pages.
 Server: Integration tests for all API endpoints.
 Coverage reports generated with Jest.
 
-## gitignore
+# gitignore
+
 Include:
 /node_modules
 /client/node_modules
@@ -140,6 +167,11 @@ Include:
 /client/.env
 /server/.en
 
+# Screenshots
+
+
+
 # Author
+
 Kiplagat Faith Jerop : student, Mern stack Developer ,PLP
 
