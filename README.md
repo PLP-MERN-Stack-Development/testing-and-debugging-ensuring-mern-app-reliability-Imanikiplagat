@@ -36,52 +36,110 @@ mern-testing/
 └── package.json            # Project dependencies
 ```
 
+## Tech Stack
+Frontend: React, JavaScript, CSS
+Backend: Node.js, Express
+Database: MongoDB (Mongoose)
+Authentication: JWT
+Testing: Jest, Supertest, React Testing Library
+Debugging: console logs, breakpoints, error handling middleware
+
+
 ## Getting Started
+Prerequisites
+Node.js >= 18
+npm >= 9
+MongoDB
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week6-Assignment.md` file
-4. Explore the starter code and existing tests
-5. Complete the tasks outlined in the assignment
+## Installation
 
-## Files Included
+Clone the repository:
+git clone <your-repo-url>
+cd <project-root>
 
-- `Week6-Assignment.md`: Detailed assignment instructions
-- Starter code for a MERN application with basic test setup:
-  - Sample React components with test files
-  - Express routes with test files
-  - Jest and testing library configurations
-  - Example tests for reference
+Install dependencies for server and client:
+cd server
+npm install
 
-## Requirements
+cd ../client
+npm install
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Basic understanding of testing concepts
+Create .env files for server and client with appropriate variables (e.g., MONGO_URI, JWT_SECRET).
 
-## Testing Tools
+## Run the application:
 
-- Jest: JavaScript testing framework
-- React Testing Library: Testing utilities for React
-- Supertest: HTTP assertions for API testing
-- Cypress/Playwright: End-to-end testing framework
-- MongoDB Memory Server: In-memory MongoDB for testing
+# Run server
+cd server
+npm run dev
 
-## Submission
+# Run client
+cd ../client
+npm start
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+## Testing Strategy
+# Unit Tests
+# Client:
+Test React components for rendering, props, and event handling using React Testing Library.
+   Components Covered:
+Button Component – Render, variant, size, disabled state, and click handler.
+App Component – Render of main heading and core functionality.
 
-1. Complete all required tests (unit, integration, and end-to-end)
-2. Achieve at least 70% code coverage for unit tests
-3. Document your testing strategy in the README.md
-4. Include screenshots of your test coverage reports
-5. Demonstrate debugging techniques in your code
+ Approach:
+Used @testing-library/react to simulate user interactions.
+Ensured components render correctly with default props and custom variations.
+Verified click events trigger expected behavior. 
 
-## Resources
+# Server: 
+Test functions and utilities in isolation using Jest.
+      Endpoints Covered:
+POST /api/posts – Create new posts
+GET /api/posts – Fetch all posts with pagination and category filters
+GET /api/posts/:id – Fetch single post by ID
+PUT /api/posts/:id – Update post (only by author)
+DELETE /api/posts/:id – Delete post (only by author)
 
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
-- [Supertest Documentation](https://github.com/visionmedia/supertest)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
+# Approach:
+Authentication Testing
+Verified that requests without valid JWT tokens return 401 Unauthorized.
+Verified that only the author can update or delete their posts; other users receive 403 Forbidden.
+
+Validation Testing
+Checked that missing required fields (e.g., title, content) return 400 Bad Request.
+
+Functional Testing
+Created, updated, and deleted posts programmatically using test scripts.
+Confirmed the API returns the expected status codes (200, 201, 404, etc.) and data structure.
+
+# Integration Tests
+Test API endpoints using Supertest.
+Verify authentication, authorization, and CRUD operations
+
+# End-to-End Tests
+Test critical user flows from frontend to backend.
+Use tools like Cypress or Playwright (optional).
+
+Example:
+User logs in → Creates a post → Updates the post → Deletes the post
+
+# Debugging Techniques
+Use console.log() to trace values and flow.
+Apply error handling middleware on server.
+Check authentication/authorization failures carefully.
+Use breakpoints in VS Code for step-by-step debugging.
+
+# Test Coverage
+Client: Unit and integration tests for components and pages.
+Server: Integration tests for all API endpoints.
+Coverage reports generated with Jest.
+
+## gitignore
+Include:
+/node_modules
+/client/node_modules
+/server/node_modules
+/client/.env
+/server/.en
+
+# Author
+Kiplagat Faith Jerop : student, Mern stack Developer ,PLP
+
