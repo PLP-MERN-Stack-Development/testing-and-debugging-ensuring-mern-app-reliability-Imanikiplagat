@@ -173,11 +173,11 @@ Include:
 
 **Illustration**
 
-![ Pic 1](screenshot/pic1.png)
+![ Pic 1](screenshot/Pic1.png)
 
 **Illustration-2**
 
-![Dashboard](screenshot/pic2.png)
+![Dashboard](screenshot/Pic2.png)
 
 
 
