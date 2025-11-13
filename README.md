@@ -37,6 +37,7 @@ mern-testing/
 ```
 
 ## Tech Stack
+
 Frontend: React, JavaScript, CSS
 
 Backend: Node.js, Express
@@ -93,7 +94,7 @@ npm start
 
 ## Testing Strategy
 
-# Unit Tests
+ Unit Tests
 
 # Client:
 
@@ -111,8 +112,7 @@ Verified click events trigger expected behavior.
 # Server: 
 
 Test functions and utilities in isolation using Jest.
-
-      Endpoints Covered:
+Endpoints Covered:
 POST /api/posts – Create new posts
 GET /api/posts – Fetch all posts with pagination and category filters
 GET /api/posts/:id – Fetch single post by ID
@@ -167,7 +167,17 @@ Include:
 /client/.env
 /server/.en
 
-# Screenshots
+
+### Screenshots
+
+
+**Illustration**
+
+![ Pic 1](screenshot/pic1.png)
+
+**Illustration-2**
+
+![Dashboard](screenshot/pic2.png)
 
 
 
